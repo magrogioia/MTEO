@@ -22,6 +22,7 @@
   ns1:conservationStatus "Endangered"^^xsd:string ;
   ns1:scientificName "Stegostoma tigrinum"^^xsd:string ;
   ns0:name "Zebra Shark"^^xsd:string ;
+  ns2:feedsOn <https://example.org/organisms/clownfish>, <https://example.org/organisms/emperor-angelfish> ;
   ns2:functionalNote "Top predator helping regulate population dynamics."^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> ;
   ns2:playsEcologicalRole ns2:PredatorRole .
@@ -31,6 +32,7 @@
   ns1:conservationStatus "Least Concern"^^xsd:string ;
   ns1:scientificName "Pomacanthus imperator"^^xsd:string ;
   ns0:name "Emperor Angelfish"^^xsd:string ;
+  ns2:feedsOn <https://example.org/organisms/montipora-coral>, <https://example.org/organisms/ulva-alga> ;
   ns2:functionalNote "Omnivorous species interacting with both corals and algae."^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> ;
   ns2:playsEcologicalRole ns2:PredatorRole .
@@ -42,7 +44,7 @@
   ns0:name "Montipora Coral"^^xsd:string ;
   ns0:sameAs "http://dbpedia.org/resource/Montipora"^^xsd:string ;
   ns0:taxonRank "species"^^xsd:string ;
-  ns2:absorbsSubstance "calcium, magnesium"^^xsd:string ;
+  ns2:absorbsSubstance "calcium"^^xsd:string, "magnesium"^^xsd:string ;
   ns2:functionalNote "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis."^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
 
@@ -52,7 +54,8 @@
   ns0:name "Ulva Alga"^^xsd:string ;
   ns0:sameAs "http://dbpedia.org/resource/Ulva"^^xsd:string ;
   ns0:taxonRank "species"^^xsd:string ;
-  ns2:absorbsSubstance "nitrates, phosphates"^^xsd:string ;
+  ns2:absorbsSubstance "nitrates"^^xsd:string, "phosphates"^^xsd:string ;
   ns2:functionalNote "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."^^xsd:string ;
   ns2:growthSpeed "fast"^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
+
