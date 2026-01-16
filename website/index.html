@@ -36,6 +36,10 @@
       "dwc:conservationStatus": "Endangered",
       "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
       "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
+      "mteo:feedsOn": [
+        { "@id": "https://example.org/organisms/clownfish" },
+        { "@id": "https://example.org/organisms/emperor-angelfish" }
+      ],
       "mteo:functionalNote": "Top predator helping regulate population dynamics."
     },
     {
@@ -46,6 +50,10 @@
       "dwc:conservationStatus": "Least Concern",
       "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
       "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
+      "mteo:feedsOn": [
+        { "@id": "https://example.org/organisms/montipora-coral" },
+        { "@id": "https://example.org/organisms/ulva-alga" }
+      ],
       "mteo:functionalNote": "Omnivorous species interacting with both corals and algae."
     },
     {
@@ -58,7 +66,7 @@
       "schema:sameAs": "http://dbpedia.org/resource/Montipora",
       "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
       "mteo:functionalNote": "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis.",
-      "mteo:absorbsSubstance": "calcium, magnesium"
+      "mteo:absorbsSubstance": ["calcium", "magnesium"]
     },
     {
       "@id": "https://example.org/organisms/ulva-alga",
@@ -69,7 +77,7 @@
       "schema:sameAs": "http://dbpedia.org/resource/Ulva",
       "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
       "mteo:growthSpeed": "fast",
-      "mteo:absorbsSubstance": "nitrates, phosphates",
+      "mteo:absorbsSubstance": ["nitrates", "phosphates"],
       "mteo:functionalNote": "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."
     }
   ]
