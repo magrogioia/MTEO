@@ -40,20 +40,19 @@
   ns1:conservationStatus "Least Concern"^^xsd:string ;
   ns1:scientificName "Montipora capricornis"^^xsd:string ;
   ns0:name "Montipora Coral"^^xsd:string ;
-  ns0:taxonRank "species" ;
-  ns0:sameAs ex:Montipora ;
-  ns2:functionalNote "Provides habitat and absorbs Ca/Mg for skeletal growth, releases O2 via zooxanthellae."^^xsd:string ;
+  ns0:sameAs "http://dbpedia.org/resource/Montipora"^^xsd:string ;
+  ns0:taxonRank "species"^^xsd:string ;
   ns2:absorbsSubstance "calcium, magnesium"^^xsd:string ;
+  ns2:functionalNote "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis."^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
 
 <https://example.org/organisms/ulva-alga>
-  a ns2:Alga, ns0:Taxon ;
+  a ns2:Algae, ns0:Taxon ;
   ns1:scientificName "Ulva lactuca"^^xsd:string ;
   ns0:name "Ulva Alga"^^xsd:string ;
-  ns0:taxonRank "species" ;
-  ns0:sameAs ex:Ulva ;
+  ns0:sameAs "http://dbpedia.org/resource/Ulva"^^xsd:string ;
+  ns0:taxonRank "species"^^xsd:string ;
   ns2:absorbsSubstance "nitrates, phosphates"^^xsd:string ;
-  ns2:functionalNote "It absorbs excess nutrients, stabilizes water chemistry and grows rapidly."^^xsd:string ;
+  ns2:functionalNote "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."^^xsd:string ;
   ns2:growthSpeed "fast"^^xsd:string ;
   ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
-
