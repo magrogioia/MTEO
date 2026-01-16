@@ -1,0 +1,52 @@
+@prefix ns0: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://rs.tdwg.org/dwc/terms/> .
+@prefix ns2: <https://github.com/magrogioia/MTEO/blob/main/MTEO2.rdf#> .
+
+<https://acquariodigenova.it/tanks/tropical-seas>
+  a <https://github.com/magrogioia/MTEO/blob/main/MTEO2.rdf#AquariumTank> ;
+  ns0:location "Aquarium of Genoa"^^xsd:string ;
+  ns0:name "Tropical Seas"^^xsd:string .
+
+<https://acquariodigenova.it/organisms/clownfish>
+  a <https://github.com/magrogioia/MTEO/blob/main/MTEO2.rdf#MarineOrganism> ;
+  ns1:conservationStatus "Least Concern"^^xsd:string ;
+  ns1:scientificName "Amphiprion ocellaris"^^xsd:string ;
+  ns2:functionalNote "Iconic reef species that contributes to the ecological balance of the tank."^^xsd:string ;
+  ns2:locatedInTank <https://acquariodigenova.it/tanks/tropical-seas> ;
+  ns2:playsEcologicalRole ns2:PreyRole ;
+  ns0:name "Clownfish"^^xsd:string .
+
+<https://acquariodigenova.it/organisms/zebra-shark>
+  a ns2:MarineOrganism ;
+  ns1:conservationStatus "Endangered"^^xsd:string ;
+  ns1:scientificName "Stegostoma tigrinum"^^xsd:string ;
+  ns2:functionalNote "Predator species that helps regulate population dynamics within the tank."^^xsd:string ;
+  ns2:locatedInTank <https://acquariodigenova.it/tanks/tropical-seas> ;
+  ns2:playsEcologicalRole ns2:PredatorRole ;
+  ns0:name "Zebra Shark"^^xsd:string .
+
+<https://acquariodigenova.it/organisms/emperor-angelfish>
+  a ns2:MarineOrganism ;
+  ns1:conservationStatus "Least Concern"^^xsd:string ;
+  ns1:scientificName "Pomacanthus imperator"^^xsd:string ;
+  ns2:locatedInTank <https://acquariodigenova.it/tanks/tropical-seas> ;
+  ns2:playsEcologicalRole ns2:PredatorRole ;
+  ns0:name "Emperor Angelfish"^^xsd:string .
+
+<https://acquariodigenova.it/organisms/acropora-coral>
+  a ns2:Coral ;
+  ns1:conservationStatus "Critically Endangered"^^xsd:string ;
+  ns1:scientificName "Acropora cervicornis"^^xsd:string ;
+  ns2:functionalNote "Forms complex habitats that support biodiversity within the tank."^^xsd:string ;
+  ns2:locatedInTank <https://acquariodigenova.it/tanks/tropical-seas> ;
+  ns0:name "Acropora Coral"^^xsd:string .
+
+<https://acquariodigenova.it/organisms/caulerpa-alga>
+  a ns2:Alga ;
+  ns1:scientificName "Caulerpa prolifera"^^xsd:string ;
+  ns2:absorbsSubstance "nitrates"^^xsd:string ;
+  ns2:functionalNote "Absorbs excess nutrients, contributing to water chemical stability."^^xsd:string ;
+  ns2:growthSpeed "fast"^^xsd:string ;
+  ns2:locatedInTank <https://acquariodigenova.it/tanks/tropical-seas> ;
+  ns0:name "Caulerpa Alga"^^xsd:string .
