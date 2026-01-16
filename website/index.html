@@ -5,77 +5,76 @@
   <title>Tropical Seas Aquarium Tank</title>
 
   <script type="application/ld+json">
-  {
-    "@context": {
-      "mteo": "https://w3id.org/mteo#",
-      "dwc": "http://rs.tdwg.org/dwc/terms/",
-      "schema": "https://schema.org/"
+{
+  "@context": {
+    "mteo": "https://w3id.org/mteo#",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "schema": "https://schema.org/"
+  },
+  "@graph": [
+    {
+      "@id": "https://example.org/tanks/tropical-seas",
+      "@type": "mteo:AquariumTank",
+      "schema:name": "Tropical Seas Aquarium Tank",
+      "schema:location": "Aquarium of Genoa"
     },
-    "@graph": [
+    {
+      "@id": "https://example.org/organisms/clownfish",
+      "@type": "mteo:MarineOrganism",
+      "schema:name": "Clownfish",
+      "dwc:scientificName": "Amphiprion ocellaris",
+      "dwc:conservationStatus": "Least Concern",
+      "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
+      "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PreyRole" },
+      "mteo:functionalNote": "A reef-associated species that contributes to ecosystem balance."
+    },
+    {
+      "@id": "https://example.org/organisms/zebra-shark",
+      "@type": "mteo:MarineOrganism",
+      "schema:name": "Zebra Shark",
+      "dwc:scientificName": "Stegostoma tigrinum",
+      "dwc:conservationStatus": "Endangered",
+      "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
+      "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
+      "mteo:functionalNote": "Top predator helping regulate population dynamics."
+    },
+    {
+      "@id": "https://example.org/organisms/emperor-angelfish",
+      "@type": "mteo:MarineOrganism",
+      "schema:name": "Emperor Angelfish",
+      "dwc:scientificName": "Pomacanthus imperator",
+      "dwc:conservationStatus": "Least Concern",
+      "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
+      "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
+      "mteo:functionalNote": "Omnivorous species interacting with both corals and algae."
+    },
+    {
+      "@id": "https://example.org/organisms/montipora-coral",
+      "@type": ["mteo:Coral", "schema:Taxon"],
+      "schema:name": "Montipora Coral",
+      "dwc:scientificName": "Montipora capricornis",
+      "dwc:conservationStatus": "Least Concern",
+      "schema:taxonRank": "species",
+      "schema:sameAs": "http://dbpedia.org/resource/Montipora",
+      "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
+      "mteo:functionalNote": "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis.",
+      "mteo:absorbsSubstance": "calcium, magnesium"
+    },
+    {
+      "@id": "https://example.org/organisms/ulva-alga",
+      "@type": ["mteo:Alga", "schema:Taxon"],
+      "schema:name": "Ulva Alga",
+      "dwc:scientificName": "Ulva lactuca",
+      "schema:taxonRank": "species",
+      "schema:sameAs": "http://dbpedia.org/resource/Ulva",
+      "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
+      "mteo:growthSpeed": "fast",
+      "mteo:absorbsSubstance": "nitrates, phosphates",
+      "mteo:functionalNote": "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."
+    }
+  ]
+}
 
-      {
-        "@id": "https://example.org/tanks/tropical-seas",
-        "@type": "mteo:AquariumTank",
-        "schema:name": "Tropical Seas Aquarium Tank",
-        "schema:location": "Aquarium of Genoa"
-      },
-
-      {
-        "@id": "https://example.org/organisms/clownfish",
-        "@type": "mteo:MarineOrganism",
-        "schema:name": "Clownfish",
-        "dwc:scientificName": "Amphiprion ocellaris",
-        "dwc:conservationStatus": "Least Concern",
-        "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
-        "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PreyRole" },
-        "mteo:functionalNote": "A reef-associated species that contributes to ecosystem balance."
-      },
-
-      {
-        "@id": "https://example.org/organisms/zebra-shark",
-        "@type": "mteo:MarineOrganism",
-        "schema:name": "Zebra Shark",
-        "dwc:scientificName": "Stegostoma tigrinum",
-        "dwc:conservationStatus": "Endangered",
-        "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
-        "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
-        "mteo:functionalNote": "Top predator helping regulate population dynamics."
-      },
-
-      {
-        "@id": "https://example.org/organisms/emperor-angelfish",
-        "@type": "mteo:MarineOrganism",
-        "schema:name": "Emperor Angelfish",
-        "dwc:scientificName": "Pomacanthus imperator",
-        "dwc:conservationStatus": "Least Concern",
-        "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
-        "mteo:playsEcologicalRole": { "@id": "https://w3id.org/mteo#PredatorRole" },
-        "mteo:functionalNote": "Omnivorous species interacting with both corals and algae."
-      },
-
-      {
-        "@id": "https://example.org/organisms/acropora-coral",
-        "@type": "mteo:Coral",
-        "schema:name": "Acropora Coral",
-        "dwc:scientificName": "Acropora cervicornis",
-        "dwc:conservationStatus": "Critically Endangered",
-        "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
-        "mteo:functionalNote": "Provides habitat complexity and supports biodiversity."
-      },
-
-      {
-        "@id": "https://example.org/organisms/caulerpa-alga",
-        "@type": "mteo:Alga",
-        "schema:name": "Caulerpa Alga",
-        "dwc:scientificName": "Caulerpa prolifera",
-        "mteo:locatedInTank": { "@id": "https://example.org/tanks/tropical-seas" },
-        "mteo:growthSpeed": "fast",
-        "mteo:absorbsSubstance": "nitrates",
-        "mteo:functionalNote": "Absorbs excess nutrients and stabilizes water chemistry."
-      }
-
-    ]
-  }
   </script>
 </head>
 
