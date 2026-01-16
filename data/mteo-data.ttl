@@ -1,61 +1,114 @@
-@prefix ns0: <https://schema.org/> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ns1: <http://rs.tdwg.org/dwc/terms/> .
-@prefix ns2: <https://w3id.org/mteo#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix mteo: <https://w3id.org/mteo#> .
+
+#################################################
+# Aquarium Tank
+#################################################
 
 <https://example.org/tanks/tropical-seas>
-  a <https://w3id.org/mteo#AquariumTank> ;
-  ns0:location "Aquarium of Genoa"^^xsd:string ;
-  ns0:name "Tropical Seas Aquarium Tank"^^xsd:string .
+  a mteo:AquariumTank ;
+  schema:name "Tropical Seas Aquarium Tank"^^xsd:string ;
+  schema:location "Aquarium of Genoa"^^xsd:string .
+
+#################################################
+# Marine Organisms – Animals
+#################################################
 
 <https://example.org/organisms/clownfish>
-  a <https://w3id.org/mteo#MarineOrganism> ;
-  ns1:conservationStatus "Least Concern"^^xsd:string ;
-  ns1:scientificName "Amphiprion ocellaris"^^xsd:string ;
-  ns0:name "Clownfish"^^xsd:string ;
-  ns2:functionalNote "A reef-associated species that contributes to ecosystem balance."^^xsd:string ;
-  ns2:locatedInTank <https://example.org/tanks/tropical-seas> ;
-  ns2:playsEcologicalRole ns2:PreyRole .
+  a mteo:MarineOrganism ;
+  schema:name "Clownfish"^^xsd:string ;
+  dwc:scientificName "Amphiprion ocellaris"^^xsd:string ;
+  dwc:conservationStatus "Least Concern"^^xsd:string ;
+  mteo:locatedInTank <https://example.org/tanks/tropical-seas> ;
+  mteo:playsEcologicalRole mteo:PreyRole ;
+  mteo:functionalNote
+    "A reef-associated species that contributes to ecosystem balance."^^xsd:string .
 
 <https://example.org/organisms/zebra-shark>
-  a ns2:MarineOrganism ;
-  ns1:conservationStatus "Endangered"^^xsd:string ;
-  ns1:scientificName "Stegostoma tigrinum"^^xsd:string ;
-  ns0:name "Zebra Shark"^^xsd:string ;
-  ns2:feedsOn <https://example.org/organisms/clownfish>, <https://example.org/organisms/emperor-angelfish> ;
-  ns2:functionalNote "Top predator helping regulate population dynamics."^^xsd:string ;
-  ns2:locatedInTank <https://example.org/tanks/tropical-seas> ;
-  ns2:playsEcologicalRole ns2:PredatorRole .
+  a mteo:MarineOrganism ;
+  schema:name "Zebra Shark"^^xsd:string ;
+  dwc:scientificName "Stegostoma tigrinum"^^xsd:string ;
+  dwc:conservationStatus "Endangered"^^xsd:string ;
+  mteo:locatedInTank <https://example.org/tanks/tropical-seas> ;
+  mteo:playsEcologicalRole mteo:PredatorRole ;
+  mteo:feedsOn
+    <https://example.org/organisms/clownfish> ,
+    <https://example.org/organisms/emperor-angelfish> ;
+  mteo:functionalNote
+    "Top predator helping regulate population dynamics."^^xsd:string .
 
 <https://example.org/organisms/emperor-angelfish>
-  a ns2:MarineOrganism ;
-  ns1:conservationStatus "Least Concern"^^xsd:string ;
-  ns1:scientificName "Pomacanthus imperator"^^xsd:string ;
-  ns0:name "Emperor Angelfish"^^xsd:string ;
-  ns2:feedsOn <https://example.org/organisms/montipora-coral>, <https://example.org/organisms/ulva-alga> ;
-  ns2:functionalNote "Omnivorous species interacting with both corals and algae."^^xsd:string ;
-  ns2:locatedInTank <https://example.org/tanks/tropical-seas> ;
-  ns2:playsEcologicalRole ns2:PredatorRole .
+  a mteo:MarineOrganism ;
+  schema:name "Emperor Angelfish"^^xsd:string ;
+  dwc:scientificName "Pomacanthus imperator"^^xsd:string ;
+  dwc:conservationStatus "Least Concern"^^xsd:string ;
+  mteo:locatedInTank <https://example.org/tanks/tropical-seas> ;
+  mteo:playsEcologicalRole mteo:PredatorRole ;
+  mteo:feedsOn
+    <https://example.org/organisms/montipora-coral> ,
+    <https://example.org/organisms/ulva-alga> ;
+  mteo:functionalNote
+    "Omnivorous species interacting with both corals and algae."^^xsd:string .
+
+#################################################
+# Marine Organisms – Coral
+#################################################
 
 <https://example.org/organisms/montipora-coral>
-  a ns2:Coral, ns0:Taxon ;
-  ns1:conservationStatus "Least Concern"^^xsd:string ;
-  ns1:scientificName "Montipora capricornis"^^xsd:string ;
-  ns0:name "Montipora Coral"^^xsd:string ;
-  ns0:sameAs "http://dbpedia.org/resource/Montipora"^^xsd:string ;
-  ns0:taxonRank "species"^^xsd:string ;
-  ns2:absorbsSubstance "calcium"^^xsd:string, "magnesium"^^xsd:string ;
-  ns2:functionalNote "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis."^^xsd:string ;
-  ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
+  a mteo:Coral ,
+    mteo:MarineOrganism ,
+    schema:Taxon ;
+  schema:name "Montipora Coral"^^xsd:string ;
+  dwc:scientificName "Montipora capricornis"^^xsd:string ;
+  dwc:conservationStatus "Least Concern"^^xsd:string ;
+  schema:taxonRank "species"^^xsd:string ;
+  schema:sameAs "http://dbpedia.org/resource/Montipora"^^xsd:string ;
+  mteo:locatedInTank <https://example.org/tanks/tropical-seas> ;
+  mteo:absorbsSubstance
+    <https://example.org/nutrients/calcium> ,
+    <https://example.org/nutrients/magnesium> ;
+  mteo:functionalNote
+    "Provides habitat complexity, absorbs Ca/Mg for skeleton growth, releases O2 via zooxanthellae symbiosis."^^xsd:string .
+
+#################################################
+# Marine Organisms – Algae
+#################################################
 
 <https://example.org/organisms/ulva-alga>
-  a ns2:Algae, ns0:Taxon ;
-  ns1:scientificName "Ulva lactuca"^^xsd:string ;
-  ns0:name "Ulva Alga"^^xsd:string ;
-  ns0:sameAs "http://dbpedia.org/resource/Ulva"^^xsd:string ;
-  ns0:taxonRank "species"^^xsd:string ;
-  ns2:absorbsSubstance "nitrates"^^xsd:string, "phosphates"^^xsd:string ;
-  ns2:functionalNote "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."^^xsd:string ;
-  ns2:growthSpeed "fast"^^xsd:string ;
-  ns2:locatedInTank <https://example.org/tanks/tropical-seas> .
+  a mteo:Algae ,
+    mteo:MarinePlant ,
+    mteo:MarineOrganism ,
+    schema:Taxon ;
+  schema:name "Ulva Alga"^^xsd:string ;
+  dwc:scientificName "Ulva lactuca"^^xsd:string ;
+  schema:taxonRank "species"^^xsd:string ;
+  schema:sameAs "http://dbpedia.org/resource/Ulva"^^xsd:string ;
+  mteo:locatedInTank <https://example.org/tanks/tropical-seas> ;
+  mteo:growthSpeed "fast"^^xsd:string ;
+  mteo:absorbsSubstance
+    <https://example.org/nutrients/nitrates> ,
+    <https://example.org/nutrients/phosphates> ;
+  mteo:functionalNote
+    "Absorbs excess nutrients, stabilizes water chemistry and grows rapidly as natural biofilter."^^xsd:string .
 
+#################################################
+# Nutrients
+#################################################
+
+<https://example.org/nutrients/calcium>
+  a mteo:Nutrient ;
+  schema:name "Calcium"^^xsd:string .
+
+<https://example.org/nutrients/magnesium>
+  a mteo:Nutrient ;
+  schema:name "Magnesium"^^xsd:string .
+
+<https://example.org/nutrients/nitrates>
+  a mteo:Nutrient ;
+  schema:name "Nitrates"^^xsd:string .
+
+<https://example.org/nutrients/phosphates>
+  a mteo:Nutrient ;
+  schema:name "Phosphates"^^xsd:string .
