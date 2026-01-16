@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/utente/ontologies/2026/0/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/utente/ontologies/2026/0/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfabsorbsNutrient -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfabsorbsNutrient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfNutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfaffectsWaterParameter -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfaffectsWaterParameter">
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfWaterParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdffeedsOn -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdffeedsOn">
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdflocatedInTank -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdflocatedInTank">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfAquariumTank"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfplaysEcologicalRole -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfplaysEcologicalRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfEcologicalRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfhasFunctionalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfhasFunctionalDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfhasGrowthRate -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfhasGrowthRate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfAlgae -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfAlgae">
+        <rdfs:subClassOf rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfAquariumTank -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfAquariumTank"/>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfCoral -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfCoral">
+        <rdfs:subClassOf rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+        <owl:disjointWith rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfEcologicalRole -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfEcologicalRole"/>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarinePlant">
+        <rdfs:subClassOf rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfMarineOrganism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfNutrient -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfNutrient"/>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfPredatorRole -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfPredatorRole">
+        <rdfs:subClassOf rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfEcologicalRole"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfPreyRole -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfPreyRole">
+        <rdfs:subClassOf rdf:resource="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfEcologicalRole"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfWaterParameter -->
+
+    <owl:Class rdf:about="https://github.com/magrogioia/MTEO/blob/main/MTEO.rdfWaterParameter"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
