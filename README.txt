@@ -1,4 +1,15 @@
-Main Classes
+MTEO (Marine Tank Ecosystem Ontology) is a lightweight ontology designed to model marine ecosystems within aquarium tanks, focusing on ecological roles, functional interactions, and environmental contributions of marine organisms.
+
+This repository provides:
+
+- The MTEO ontology (RDF)
+
+- Example JSON-LD datasets
+
+MTEO is an original ontology created by the author of this repository.
+Darwin Core and Schema.org are NOT created nor maintained by this project.
+
+---------------- Main Classes ----------------
 
 mteo:AquariumTank
 
@@ -16,7 +27,7 @@ mteo:PredatorRole
 
 mteo:PreyRole
 
-Main Object Properties
+---------------- Main Object Properties ----------------
 
 mteo:locatedInTank
 
@@ -28,7 +39,7 @@ mteo:absorbsSubstance
 
 mteo:affectsWaterParameter
 
-Main Datatype Properties
+---------------- Main Datatype Properties ----------------
 
 mteo:functionalNote
 
