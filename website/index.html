@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tropical Seas Aquarium Tank</title>
+  <title>MTEO Project</title>
+  <link rel="stylesheet" href="style.css">
 
+  <!-- JSON-LD -->
   <script type="application/ld+json">
 {
   "@context": {
@@ -82,16 +84,156 @@
     }
   ]
 }
-
   </script>
 </head>
-
 <body>
-  <h1>Tropical Seas Aquarium Tank</h1>
+  <!-- Navigation Menu -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="https://github.com/magrogioia/MTEO" target="_blank" class="nav-link">
+      <svg class="nav-github-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+      GitHub
+    </a>
+    <a href="#overview" class="nav-link active">Overview</a>
+    <a href="#mteo" class="nav-link">MTEO</a>
+  </div>
+</nav>
 
-  <p>
-    This page describes the Tropical Seas tank of the Aquarium of Genoa and its
-    main inhabitants using Semantic Web technologies and Linked Data.
+  <!-- Header with carousel -->
+  <header>
+    <div class="carousel">
+      <img class="carousel-slide active" src="media/2.jpg" alt="Tropical Seas Tank view 1">
+      <img class="carousel-slide" src="media/3.jpg" alt="Tropical Seas Tank view 2">
+      <img class="carousel-slide" src="media/4.jpg" alt="Tropical Seas Tank view 3">
+      <img class="carousel-slide" src="media/5.jpg" alt="Tropical Seas Tank view 4">
+      <img class="carousel-slide" src="media/6.jpg" alt="Tropical Seas Tank view 5">
+      <div class="carousel-center-title">The MTEO Project</div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="left with-image-edge">
+      <div class="text-image-container">
+        <div class="text-block">
+          <h1>Project Overview</h1>
+          <p>
+            This project explores how <em>semantic web technologies</em> can enhance the management of complex marine ecosystems in aquariums. 
+            While modern aquariums rely on advanced sensors to continuously monitor physical parameters such as temperature, salinity, pH, and water chemistry, 
+            a significant portion of the knowledge needed to maintain ecosystem stability remains implicit and depends on the long-term experience of staff members.
+          </p>
+          <p>
+            This raised questions about how to enhance the semantic web. While comprehensive ontologies already exist that describe relationships between species and their characteristics, they primarily focus on taxonomic classification rather than elucidating their ecological roles in nature. 
+            <em>Darwin Core</em>, a derivative of Dublin Core, serves as a prime example of such ontologies.
+          </p>
+          <p>
+            For this particular project, the <em>Genoa Aquarium</em> "Tropical Seas" tank was analyzed, as it contains various species performing both simple and complex ecological functions.
+          </p>
+        </div>
+
+        <div class="image-edge">
+          <img src="media/7.jpg" alt="Aquarium of Genoa, night view of external building">
+        </div>
+      </div>
+    </section>
+
+    <section class="right with-image">
+      <div class="text-image-container">
+        <div class="text-block">
+          <h1>Why choose this approach?</h1>
+          <p>
+            Traditional aquarium management often relies on <em>tacit knowledge</em> acquired through years of practical experience. 
+            This project emphasizes that by capturing this knowledge in a structured ontology, it becomes possible to support both human and software agents 
+            in understanding and reasoning about the system. 
+            The approach enables new staff, researchers, and educators to access detailed insights about ecological roles, functional interactions, 
+            and potential effects of interventions within the tank without the need to rely solely on experiential learning.
+          </p>
+          <p>
+            By focusing on <em>interactions and functional contributions</em> rather than mere taxonomy, the system provides a foundation for advanced queries, 
+            decision-making support, and educational applications. For example, one could determine which species regulate nutrient levels, 
+            which species are endangered, or how the removal or introduction of a particular organism might affect the overall balance of the ecosystem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr style="width:70%">
+
+    <section id="mteo" class="left">
+      <h1>The MTEO Ontology</h1>
+      <p>
+        The Marine Tank Ecosystem Ontology (<em>MTEO</em>) complements existing standards such as <em>Darwin Core</em> and <em>Schema.org</em>, 
+        providing a lightweight, domain-specific semantic layer for aquarium ecosystems. 
+        It allows the representation of functional roles, species interactions, and ecological processes in a machine-readable format while remaining interpretable by humans. 
+        The ontology supports structured reasoning, enabling applications to perform complex queries, infer relationships, and assist in training and decision-making processes.
+      </p>
+      <p>
+        Applying MTEO to the Tropical Seas tank demonstrates the practical benefits of formalizing operational knowledge. 
+        All organisms, their roles, and interactions are represented in a structured, reusable manner. 
+        This approach reduces reliance on tacit knowledge, promotes knowledge transfer, and ensures that valuable ecological insights are preserved for both current and future aquarium management efforts. <br> <br>
+        The Ontology, and the example turtle dataset are available to download at this <a href="https://github.com/magrogioia/MTEO" target="_blank" class="ontology-link">OpenSource Github Repository</a>.
+      </p>
+    </section>
+
+    <section class="full-width-image">
+      <img src="media/mteoblack.svg" alt="MTEO Data Model Visualization">
+    </section>
+
+    <section class="left">
+      <p>
+        In the upper diagram, the ontology's <em>Data Model</em> is displayed. 
+        Data properties and object properties introduced by the custom MTEO ontology are highlighted in red. 
+        It is evident that, to adopt a holistic approach to aquarium management, it is necessary to implement this type of framework, 
+        which analyzes the relationships and roles that various organisms assume within the tank. <br><br>
+        Below this diagram, two comparative images are displayed, offering a clearer and more detailed visualization of the differences. 
+        These images help illustrate how the integration of the MTEO ontology can enhance understanding of 
+        ecosystem interactions and demonstrate the practical benefits of formalizing ecological and functional knowledge within the aquarium context.
+      </p>
+    </section>
+
+    <!-- Comparison Carousel -->
+    <section class="comparison-carousel-section">
+      <div class="comparison-carousel">
+        <button class="carousel-prev">&#8249;</button>
+        <div class="comparison-slides">
+          <img class="comparison-slide active" src="media/before.png" alt="Comparison image 1">
+          <img class="comparison-slide" src="media/after.png" alt="Comparison image 2">
+        </div>
+        <button class="carousel-next">&#8250;</button>
+      </div>
+    </section>
+
+    <section class="left json-ld-notice">
+  
+    <h1>JSON-LD Structured Data</h1>
+    <p>
+    This HTML file contains embedded <em>JSON-LD</em> structured data 
+    describing the "Tropical Seas" aquarium tank and its ecosystem. The data includes all organisms, 
+    their ecological roles, conservation status, and functional interactions as defined by the MTEO ontology.
   </p>
+  <p>
+    To view the JSON-LD data, right-click on the page → <em>"View Page Source"</em> (or press <kbd>Ctrl+U</kbd>) 
+    and search for <code>&lt;script type="application/ld+json"&gt;</code>. The structured data is located in the 
+    <code>&lt;head&gt;</code> section and can be validated using Google's <a href="https://search.google.com/test/rich-results" target="_blank" class="ontology-link">Rich Results Test</a>.
+  </p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Gioia Magro - Website developed for the exam "Data Semantic for Arts" - 
+      <a href="https://github.com/magrogioia/MTEO" target="_blank" class="footer-link">
+        <svg class="github-icon" width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+        </svg>
+    Repository
+      </a>
+      - Images by: Pexels
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
