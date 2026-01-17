@@ -4,7 +4,7 @@ This repository provides:
 
 - The MTEO ontology (RDF)
 
-- Example JSON-LD datasets
+- Example Turtle dataset
 
 MTEO is an original ontology created by the author of this repository.
 Darwin Core and Schema.org are NOT created nor maintained by this project.
